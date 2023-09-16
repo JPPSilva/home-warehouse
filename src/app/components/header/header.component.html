@@ -1,0 +1,15 @@
+<div class="nav-bar">
+    <img class="open-menu" *ngIf="menuStatus == false" src="../../../assets/icons/menu-icon-white.png" alt="Open Menu" (click)="openMenu()">
+    <img class="close-menu" *ngIf="menuStatus == true" src="../../../assets/icons/left-arrow-white.png" alt="Close Menu" (click)="closeMenu()">
+
+    <div class="page-title">
+        <span>{{menuLocationName}}</span>
+    </div>
+</div>
+
+<div class="menu-popup" *ngIf="menuStatus == true">
+    <div class="menu-options">
+        <a class="option" [routerLink]="['/warehouse']" (click)="handleNameChange('Armazém')">- Armazém</a>
+        <a class="option" [routerLink]="['/list']" (click)="handleNameChange('Listas')">- Listas</a>
+    </div>
+</div>

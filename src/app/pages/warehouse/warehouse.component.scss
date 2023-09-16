@@ -1,0 +1,116 @@
+@import "../../utils/vars.scss";
+
+.top-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .btn-add-product {
+        background: linear-gradient(to bottom, #599bb3 25%, #408c99 100%);
+        border-radius: 8px;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: $main-font;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 13px 32px;
+        border: none;
+    }
+
+    .btn-add-product:hover {
+        background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+        background-color: #408c99;
+    }
+
+    .btn-add-product:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.product-list {
+    padding: 12px;
+
+    .list-name {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-family: $main-font;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0px;
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+
+            .product-name {
+                font-family: $main-font;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            .product-quantity {
+                font-family: $main-font;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            .product-actions {
+                .btn-action {
+                    background: linear-gradient(to bottom, #eb3269 25%, #940045 100%);
+                    border-radius: 8px;
+                    cursor: pointer;
+                    color: #ffffff;
+                    font-family: $main-font;
+                    font-size: 10px;
+                    font-weight: 300;
+                    padding: 3px 12px;
+                    border: none;
+
+                    img{
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+
+        .vertical-separator {
+            width: 100%;
+            border: solid 1px #000;
+            margin-top: 12px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.popup-form {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: azure;
+    padding: 6px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    .form-input {
+        margin-bottom: 8px;
+    }
+}

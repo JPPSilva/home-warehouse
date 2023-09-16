@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="top-section">
+    <button class="btn-add-product" (click)="openForm()">Adicionar Produto</button>
+</div>
+
+<div class="product-list">
+    <div class="list-name">
+        <span>Nome</span>
+        <span>Quantidade</span>
+        <span>Ações</span>
+    </div>
+    <div class="product" *ngFor="let product of storageArray">
+        <div class="card">
+            <span class="product-name">{{product.name}}</span>
+            <span class="product-quantity">{{product.quantity}}</span>
+            <div class="product-actions">
+                <button class="btn-action" (click)="remove(product)"><img src="../../../assets/icons/remove.png" alt="Remover"></button>
+                <button class="btn-action" (click)="delete(product)"><img src="../../../assets/icons/delete.png" alt="Eliminar"></button>
+            </div>   
+        </div>
+             
+        <div class="vertical-separator"></div>
+    </div>
+</div>
+
+<div class="popup-form" *ngIf="formStatus == true">
+    <form [formGroup]="addForm">
+        <h3>Adicionar Produto</h3>
+
+        <div class="form-input">
+            <label for="name">Nome: </label>
+            <input id="name" formControlName="name" type="text">
+        </div>
+
+        <div class="form-input">
+            <label for="quantity">Quantidade: </label>
+            <input id="name" formControlName="quantity" type="text">
+        </div>
+
+        <button type="submit" (click)="createProduct()">Criar Produto</button>
+        <button (click)="closeForm()">Fechar Formulário</button>
+    </form>
+</div>
