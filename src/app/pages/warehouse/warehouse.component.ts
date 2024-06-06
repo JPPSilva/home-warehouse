@@ -14,7 +14,7 @@ export class WarehouseComponent {
   formStatus: boolean = false
 
   /* Test Storage Array */
-  storageArray = [{ 'id': 1, 'name': "Teste", 'quantity': 2 }]
+  storageArray = [{ 'id': 1, 'name': "Arroz", 'quantity': 2 }]
 
   /* Form Model */
   addForm = new FormGroup({
@@ -38,11 +38,11 @@ export class WarehouseComponent {
 
   /* Create Product */
   createProduct() {
-    let requestData = this.addForm.value
     this.getLastId()
     let model = new Product(this.getLastId(), this.addForm.controls.name.value, this.addForm.controls.quantity.value)
     this.storageArray.push(model)
-    console.log(model)
+    this.addForm.reset()
+    this.closeForm()
   }
 
   /* Remove 1 product form the quantity */

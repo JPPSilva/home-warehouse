@@ -40,7 +40,7 @@ export class HeaderComponent {
         break;
 
       default:
-        this.menuLocationName = 'Página Inicial'
+        this.menuLocationName = 'Home'
         break;
     }
 

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomeDashboardComponent {
 
+  cards: Array<{path: string; text: string; route: string}> = [
+    {path: 'home.png', text: 'Armazem', route: 'warehouse'},
+    {path: 'clipboard.png', text: 'Listas', route: ''}
+  ]
+  chat: string = 'HELLO WORLD!'
+  emit: string = ''
+
+  changeChat() {
+  
+    }
 }

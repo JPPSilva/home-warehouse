@@ -1,1 +1,12 @@
+<!-- Header -->
 <app-header></app-header>
+
+<!-- Main Select -->
+<div class="card-holder">
+    <div class="card-box" *ngFor="let card of cards">
+        <div class="card-link" [routerLink]="['/', card.route]">
+            <img src="assets/icons/{{card.path}}" alt="test alt">
+            <span>{{card.text}}</span>
+        </div>
+    </div>
+</div>

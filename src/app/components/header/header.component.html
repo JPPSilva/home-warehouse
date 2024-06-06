@@ -9,6 +9,7 @@
 
 <div class="menu-popup" *ngIf="menuStatus == true">
     <div class="menu-options">
+        <a class="option" [routerLink]="['/']" (click)="handleNameChange('Home')">- Home</a>
         <a class="option" [routerLink]="['/warehouse']" (click)="handleNameChange('Armazém')">- Armazém</a>
         <a class="option" [routerLink]="['/list']" (click)="handleNameChange('Listas')">- Listas</a>
     </div>
